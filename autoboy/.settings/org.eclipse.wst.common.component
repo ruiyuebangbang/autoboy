@@ -3,7 +3,7 @@
     <wb-module deploy-name="autoboy">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="autoboy"/>
         <property name="java-output-path" value="/autoboy/build/classes"/>
+        <property name="context-root" value="autoboy"/>
     </wb-module>
 </project-modules>

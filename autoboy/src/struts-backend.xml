@@ -3,8 +3,9 @@
 <struts>
 	
 	<package name="vehicle" extends="hibernate-default" namespace="/provider">
-		<action name="brands" method="providerChangeBrands" class="com.autoboys.action.VehicleAction">
-			<result name="success">/provider/brandConfig.jsp</result>
+		<action name="brands" method="providerChangeBrands" class="com.autoboys.action.provider.ServiceAction">
+			<result name="init">/provider/brandConfig.jsp</result>
+			<result name="success">/provider/success.jsp</result>
 		</action>
 	</package>
 	
