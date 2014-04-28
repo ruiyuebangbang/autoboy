@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="hibernate.connection.username">yangcheke</property>
+		<property name="hibernate.connection.password">yangcheke</property>
+		<property name="hibernate.connection.autocommit">false</property>
+		<property name="hibernate.connection.pool_size">20</property>
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">none</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+
+		<mapping class="com.autoboys.domain.User" />
+		<mapping class="com.autoboys.domain.Member" />
+		<mapping class="com.autoboys.domain.VehicleCategory" />
+		<mapping class="com.autoboys.domain.VehicleBrand" />
+		<mapping class="com.autoboys.domain.VehicleSeries" />
+		<mapping class="com.autoboys.domain.VehicleEmission" />
+		<mapping class="com.autoboys.domain.VehicleYear" />
+		<mapping class="com.autoboys.domain.Vehicle" />
+		<mapping class="com.autoboys.domain.Provider" />
+		<mapping class="com.autoboys.domain.ProviderRegion" />
+
+		<mapping class="com.autoboys.domain.ServiceCat" />
+		<mapping class="com.autoboys.domain.Service" />
+		<mapping class="com.autoboys.domain.ProductBrand" />
+		<mapping class="com.autoboys.domain.ProviderProduct" />
+		<mapping class="com.autoboys.domain.Product" />
+
+	</session-factory>
+</hibernate-configuration>

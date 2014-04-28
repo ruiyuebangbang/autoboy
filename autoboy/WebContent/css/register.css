@@ -1,0 +1,342 @@
+#my-container-wrap { //
+	border: 1px solid #ccccc8;
+	border-top: none;
+	width: 990px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.my-container {
+	clear: both;
+	background-color: #fff;
+	border: 1px solid #ccccc8;
+}
+
+.simple-header .reg-logo {
+	background: url(../image/logo.png) no-repeat;
+	width: 140px;
+	float: left;
+	height: 70px;
+}
+
+.simple-header h1 {
+	padding-top: 30px;
+	float: left;
+	font: 24px/24px "微软雅黑", "宋体";
+	color: #333;
+}
+
+input {
+	vertical-align: -2px;
+	_vertical-align: 0px;
+}
+
+.G_nologin {
+	width: 990px;
+	margin: 0 auto;
+}
+
+.G_reg_header {
+	padding: 15px 0;
+}
+
+.reg_logo .logo {
+	display: block;
+	height: 41px;
+	overflow: hidden;
+	width: 102px;
+	float: left;
+}
+
+.reg_logo .logo img {
+	width: 102;
+	height: 286px;
+	background:
+		url(http://static5.silunzi.com/css/global/newLogos.png?v=0001)
+		no-repeat;
+	_background-image: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static5.silunzi.com/css/global/newLogos.png?v=0001',
+		sizingMethod='crop' );
+	border: none;
+}
+
+.G_reg_header h1 {
+	font: 30px/50px "微软雅黑", Arial, Helvetica, '宋体';
+	float: left;
+	margin-left: 25px;
+}
+
+.W_login_form .overTxtLabel {
+	font-size: 13px;
+	text-align:left;
+}
+
+.G_nologin_main {
+	width: 920px;
+	padding: 20px;
+	background: #fff;
+}
+
+.scroll_img {
+	width: 200px;
+	float: left;
+	color: #666;
+	border-left: 1px dashed #dddddd;
+	padding-left: 60px;
+}
+
+.scroll_img #move_tag {
+	width: 660px;
+	height: 10px;
+	text-align: center;
+	line-height: 10px;
+	display: block;
+	margin-top: 10px;
+}
+
+.W_login_form .username,.W_login_form .password,.no_reg .W_btn_g,.cooperation dd a
+	{
+	background: url("../image/form_login.png") no-repeat 0 0;
+}
+
+.info_list .icon_th {
+	position: absolute;
+	left: 330px;
+	top: 44px;
+}
+
+.loginbox {
+	width: 620px;
+	float: left;
+	color: #999;
+}
+
+.loginbox .W_login_form {
+	padding-left: 50px;
+}
+
+.W_login_form .info_list {
+	margin: 0 0 20px;
+	position: relative;
+	clear: both;
+	height: 44px;
+}
+
+.W_login_form .info_list .notice {
+	position: absolute;
+	top: -21px;
+	left: 0;
+}
+
+.W_login_form .username,.W_login_form .password,.W_login_form .verify {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px 0 #eaeaea inset;
+	color: #ccc;
+	height: 30px;
+	padding: 9px 3px 3px 54px;
+	display: block;
+	float: left;
+	width: 300px;
+}
+
+.W_login_form .inpt {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px 0 #eaeaea inset;
+	color: #ccc;
+	height: 30px;
+	padding: 5px 3px 3px 12px;
+	display: block;
+	width: 300px;
+	float: left;
+	outline: none;
+	background: #fff;
+}
+
+.W_login_form .inpt input {
+	border: 0 none;
+	width: 300px;
+	height: 24px;
+	color: #808080;
+	font: 13px/15px verdana, lucida, arial, helvetica, "宋体", sans-serif;
+	vertical-align: -3px;
+	outline: none;
+	background: #fff;
+}
+
+.W_login_form .username input,.W_login_form .password input,.W_login_form .verify input
+	{
+	border: 0 none;
+	width: 300px;
+	height: 24px;
+	color: #808080;
+	font: 13px/15px verdana, lucida, arial, helvetica, "宋体", sans-serif;
+	vertical-align: -3px;
+	outline: none;
+	background: #fff;
+}
+
+.W_login_form .focus_error {
+	border-color: #dd4b39
+}
+
+.W_login_form .focusInpt {
+	box-shadow: 0 0 5px #fa601a;
+	border-color: #fa601a;
+}
+
+.W_login_form .verify {
+	padding: 9px 5px 3px;
+	float: left;
+}
+
+.W_login_form .verify input {
+	width: 155px;
+}
+
+.W_login_form .username {
+	background-position: 3px -534px;
+	width: 256px;
+}
+
+.W_login_form .password {
+	background-position: 3px -577px;
+	width: 256px;
+}
+
+.W_login_form .lostPassword a,.no_reg_tip a {
+	color: #333;
+}
+
+.W_login_form .no_reg {
+	padding-bottom: 20px;
+}
+
+.W_login_form .no_reg .W_btn_g {
+	float: left;
+	display: block;
+	width: 180px;
+	height: 60px;
+	background-position: -1px -140px;
+	font: 30px/60px "微软雅黑", Arial, Helvetica, '宋体';
+	color: #fff;
+	text-align: center;
+}
+
+.W_login_form .no_reg .W_btn_g:hover {
+	background-position: -1px -220px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.W_login_form .no_reg_tip {
+	float: right;
+	margin: 32px 0 0;
+}
+
+.info_list i,.getCheckpass i {
+	font-style: normal;
+	display: inline-block;
+	margin: 10px 0 0 16px;
+}
+
+.cooperation dt,.scroll_img h2,.W_login_form h2 {
+	color: #333;
+	font-weight: normal;
+	color: #666
+}
+
+.W_login_form h2 {
+	padding-bottom: 15px;
+	display: block;
+}
+
+.cooperation dd a {
+	display: block;
+	float: left;
+	width: 90px;
+	height: 90px;
+	margin: 0 2px 2px 0;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+.cooperation dd .sina {
+	background-position: 0 -300px;
+}
+
+.cooperation dd .qq {
+	background-position: -92px -300px;
+}
+
+.cooperation dd .zhifubao {
+	background-position: -184px -300px;
+}
+
+.cooperation dd .yinlian {
+	background-position: -276px -300px;
+}
+
+.cooperation dd .sina:hover {
+	background-position: 0 -401px;
+}
+
+.cooperation dd .qq:hover {
+	background-position: -92px -401px;
+}
+
+.cooperation dd .zhifubao:hover {
+	background-position: -184px -401px;
+}
+
+.cooperation dd .yinlian:hover {
+	background-position: -276px -401px;
+}
+
+.G_reg_bottom {
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	color: #333;
+	background: #e4e4e4;
+	text-align: left;
+}
+
+.G_reg_bottom p {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.G_reg_bottom p span {
+	margin-right: 15px;
+}
+
+.G_reg_bottom p span em {
+	font-weight: bold;
+}
+
+.mr30 {
+	margin-right: 30px !important;
+}
+
+.c_red {
+	color: red;
+}
+
+.getCheckpass {
+	margin-bottom: 28px;
+}
+
+.getCheckpass span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ececec;
+	background: #f7f7f7;
+	width: 160px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 3px;
+	color: #666;
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="main" extends="hibernate-default" namespace="/admin">
+		<action name="main"  class="com.autoboys.action.admin.DashboardAction">
+			<result name="success">/admin/dashboard.jsp</result>
+		</action>
+		<action name="queryProvider"  method="queryProvider" class="com.autoboys.action.admin.ProviderAdminAction">
+			<result name="success">/admin/queryProvider.jsp</result>
+		</action>
+		
+		<action name="editBasicInfo"  method="editBasicInfo" class="com.autoboys.action.admin.ProviderAdminAction">
+			<result name="editForm">editBasicInfo.jsp</result>
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="editStoreInfo" method="editStoreInfo" class="com.autoboys.action.admin.ProviderAdminAction">
+			<result name="editForm">editStoreInfo.jsp</result>
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="uploadImage" method="uploadImage" class="com.autoboys.action.admin.ProviderAdminAction">
+			<!-- 动态设置savePath的属性 -->            
+			<param name="savePath">/images</param>
+			<result name="success" type="redirectAction">
+			    <param name="actionName">editStoreInfo</param> 
+                <param name="picType">${picType}</param>
+                <param name="provider.ID">${provider.ID}</param>
+            </result>
+			<interceptor-ref name="fileUpload">                
+				<!-- 文件过滤 -->                
+				<param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg</param>
+				<!-- 文件大小, 以字节为单位 -->                
+				<param name="maximumSize">1025956</param>            
+			</interceptor-ref>            
+			<!-- 默认拦截器必须放在fileUpload之后，否则无�?-->            
+			<interceptor-ref name="defaultStack" />
+		</action>
+		
+		<action name="auditProviderQry"  method="auditProviderQry" class="com.autoboys.action.admin.ProviderAdminAction">
+			<result name="success">/admin/auditProvider.jsp</result>
+		</action>
+		<action name="auditProvider"  method="auditProvider" class="com.autoboys.action.admin.ProviderAdminAction">
+			<result name="success" type="redirect">auditProviderQry.action</result>
+		</action>		
+		<action name="productList"  method="list" class="com.autoboys.action.ProductAction">
+			<result name="success">/product/productList.jsp</result>
+		</action>
+		<action name="productEdit"  method="edit" class="com.autoboys.action.ProductAction">
+			<result name="input">/product/productEdit.jsp</result>
+			<result name="success" type="redirect">productList.action</result>
+		</action>
+		<action name="productAdd"  method="add" class="com.autoboys.action.ProductAction">
+			<result name="input">/product/productAdd.jsp</result>
+			<result name="success" type="redirect">productList.action</result>
+		</action>
+		<action name="mappingVehicle"  method="mappingVehicle" class="com.autoboys.action.ProductAction">
+			<result name="input">/product/mappingVehicle.jsp</result>
+		</action>
+		<action name="mappingVehicleSave"  method="mappingVehicleSave" class="com.autoboys.action.ProductAction">
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="userList"  method="list" class="com.autoboys.action.admin.UserAction">
+			<result name="success">/admin/userList.jsp</result>
+		</action>
+		<action name="disableUser"  method="disableUser" class="com.autoboys.action.admin.UserAction">
+			<result name="success" type="chain">
+				 userList
+			</result>
+		</action>
+	</package>	
+</struts>    

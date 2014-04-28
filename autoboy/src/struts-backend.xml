@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<package name="vehicle" extends="hibernate-default" namespace="/provider">
+		<action name="brands" method="providerChangeBrands" class="com.autoboys.action.VehicleAction">
+			<result name="success">/provider/brandConfig.jsp</result>
+		</action>
+	</package>
+	
+	<!--/eorder.action 使用后台模板 order.action使用前台模板，两者使用相同action程序处理  -->
+	<package name="eorder" extends="struts-default" namespace="/eorder">
+		<action name="eorderQuery" method="orderQuery" class="com.autoboys.action.OrderAction">
+			<result name="success">/order/orderQuery.jsp</result>
+		</action>
+	</package>	
+	
+	<package name="ereview" extends="struts-default" namespace="/ereview">		
+		<action name="ereviewQuery" method="reviewQuery" class="com.autoboys.action.ReviewAction">
+			<result name="success">/review/reviewQuery.jsp</result>
+		</action>
+	</package>
+	<package name="provider/service" extends="hibernate-default" namespace="/provider/service">
+		<action name="serviceConfig" method="serviceConfig" class="com.autoboys.action.provider.ServiceAction">
+            <result name="success">/provider/serviceConfig.jsp</result>
+		</action>
+	</package>
+	<package name="provider" extends="hibernate-default" namespace="/provider">
+		<action name="provider_register" class="com.autoboys.action.provider.RegisterAction">
+            <result name="create">register.jsp</result>
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="provider_login" class="com.autoboys.action.provider.LoginAction">
+			<result name="login">login.jsp</result>
+            <result name="success">success.jsp</result>
+            <result name="home" type="redirect">main.action</result>
+		</action>
+		<action name="index" class="com.autoboys.action.provider.ProviderAction">
+			<result name="success">orderQuery.jsp</result>
+		</action>
+		<action name="main" method="provider" class="com.autoboys.action.provider.ProviderAction">
+			<result name="success">index.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		
+		<action name="orderQuery" class="com.autoboys.action.provider.ProviderAction">
+			<result name="success">/order/orderQuery.jsp</result>
+		</action>
+		
+		<action name="eService" method="listProviderProduct" class="com.autoboys.action.provider.ProviderProductAction">
+			<result name="success">/product/providerProduct.jsp</result>
+		</action>	
+		<action name="editBasicInfo" method="editBasicInfo" class="com.autoboys.action.provider.StoreManagerAction">
+			<result name="editForm">editBasicInfo.jsp</result>
+			<result name="success">success.jsp</result>
+		</action>
+		<action name="editStoreInfo" method="editStoreInfo" class="com.autoboys.action.provider.StoreManagerAction">
+			<result name="editForm">editStoreInfo.jsp</result>
+			<result name="tst">tst.jsp</result>
+			<result name="success">success.jsp</result>
+		</action>
+
+		<action name="uploadImage" method="uploadImage" class="com.autoboys.action.provider.StoreManagerAction">
+			<!-- 动态设置savePath的属性 -->            
+			<param name="savePath">/images</param>
+			<result name="success" type="redirectAction">
+			    <param name="actionName">editStoreInfo</param> 
+                <param name="picType">${picType}</param>
+            </result>
+			<interceptor-ref name="fileUpload">                
+				<!-- 文件过滤 -->                
+				<param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg</param>
+				<!-- 文件大小, 以字节为单位 -->                
+				<param name="maximumSize">1025956</param>            
+			</interceptor-ref>            
+			<!-- 默认拦截器必须放在fileUpload之后，否则无�?-->            
+			<interceptor-ref name="defaultStack" />
+		</action>
+				
+		<action name="editPassword" method="editPassword" class="com.autoboys.action.UserAction">
+			<result name="editForm">/user/userPassword.jsp</result>
+			<result name="success">success.jsp</result>
+		</action>
+
+		<action name="logon" class="com.autoboys.action.provider.LoginAction">
+			<result name="success">/provider/login.jsp</result>
+		</action>
+
+	</package>
+	
+	
+</struts>    

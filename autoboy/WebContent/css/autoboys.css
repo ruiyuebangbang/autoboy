@@ -1,0 +1,396 @@
+.onumber {
+	font-family:Georgia, Arial, Helvetica, sans-serif;
+}
+.ta-left {
+	text-align:left;
+}
+.ta-right {
+	text-align:right;
+}
+.ta-center {
+	text-align:center;
+}
+.btn {
+	border: none;
+	background: #CFD1D3;
+	color: white;
+	font-size: 16.5px;
+	text-decoration: none;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden;
+}
+
+.btn:hover,.btn:focus {
+	background-color: #D7DADD;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden;
+	outline: none;  
+}
+
+.btn:active,.btn.active {
+	background-color: #2c3e50;
+	color: rgba(255, 255, 255, 0.75);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.btn.disabled,.btn[disabled] {
+	background-color: #95a5a6;
+	color: white;
+}
+
+.btn.btn-large {
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.btn-large {
+	padding: 11px 19px;
+	font-size: 17.5px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.btn-large [class^="icon-"],.btn-large [class*=" icon-"] {
+	margin-top: 4px;
+}
+
+.btn-small {
+	padding: 6px 10px;
+	font-size: 13px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.btn-small [class^="icon-"],.btn-small [class*=" icon-"] {
+	margin-top: 0;
+}
+
+.btn-mini [class^="icon-"],.btn-mini [class*=" icon-"] {
+	margin-top: -1px;
+}
+
+.btn-mini {
+	padding: 0 6px;
+	font-size: 10.5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.btn.btn-primary {
+	background-color: #e74c3c;
+	text-align: center;
+}
+
+.btn.btn-primary:hover,.btn.btn-primary:focus {
+	background-color: #ec7063;
+}
+
+.btn.btn-primary:active,.btn.btn-primary.active {
+	background-color: #e74c3c;
+}
+
+.btn-large {
+	padding: 11px 19px;
+	font-size: 17.5px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.checkbox,.radio {
+	margin-bottom: 12px;
+	padding-left: 32px;
+	position: relative;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden;
+}
+
+.checkbox:hover,.radio:hover {
+	color: #1abc9c;
+}
+
+.checkbox input,.radio input {
+	outline: none !important;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	zoom: 1;
+}
+
+.checkbox.checked .icon,.radio.checked .icon {
+	background-position: -60px -30px;
+	opacity: 1;
+	display: block\9;
+}
+
+.checkbox.checked .icon-to-fade,.radio.checked .icon-to-fade {
+	opacity: 0;
+	display: none\9;
+}
+
+.checkbox.disabled,.radio.disabled {
+	color: #d7dddd;
+	cursor: default;
+}
+
+.checkbox.disabled .icon,.radio.disabled .icon {
+	opacity: 0;
+	display: none\9;
+}
+
+.checkbox.disabled .icon-to-fade,.radio.disabled .icon-to-fade {
+	background-position: -30px -60px;
+	opacity: 1;
+	display: block\9;
+}
+
+.checkbox.disabled.checked .icon,.radio.disabled.checked .icon {
+	background-position: 0 -90px;
+	opacity: 1;
+	display: block\9;
+}
+
+.checkbox.disabled.checked .icon-to-fade,.radio.disabled.checked .icon-to-fade
+	{
+	opacity: 0;
+	display: none\9;
+}
+
+.checkbox .icon,.checkbox .icon-to-fade,.radio .icon,.radio .icon-to-fade
+	{
+	background: url("../image/checkbox.png") -90px 0 no-repeat;
+	display: block;
+	height: 20px;
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	top: -1px;
+	width: 20px;
+	-webkit-transition: opacity 0.1s linear;
+	-moz-transition: opacity 0.1s linear;
+	-o-transition: opacity 0.1s linear;
+	transition: opacity 0.1s linear;
+	-webkit-backface-visibility: hidden;
+}
+
+.checkbox .icon,.radio .icon {
+	opacity: 0;
+	top: 0;
+	z-index: 2;
+	display: none\9;
+}
+
+.radio .icon,.radio .icon-to-fade {
+	background-image: url("../images/radio.png");
+}
+
+
+	.checkbox input[type="checkbox"] {
+		float: left;
+		margin-left: -20px;
+	}
+
+	/**分页样式**/
+	.ab-pagenavi {
+		padding: 20px 0;
+		text-align: right;
+	}
+	.ab-pagenavi .numbers {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		height: 20px;
+		padding: 5px 10px;
+		margin: 0;
+		border-width: 1px 1px 1px 0;
+		border-style: solid;
+		border-color: #e6e9ed;
+		line-height: 20px;
+		vertical-align: middle;
+		color: #656d78
+	}
+	.ab-pagenavi .numbers:first-child,.ab-pagenavi .numbers:last-child {
+		padding-left: 20px;
+		padding-right: 20px
+	}
+	.ab-pagenavi a.numbers:hover {
+		text-decoration: none;
+		background: #f5f7fa
+	}
+	.ab-pagenavi span.numbers {
+		color: #ccd1d9
+	}
+	.ab-pagenavi span.current {
+		color: #fff;
+		background: #f84858
+	}
+	.ab-pagenavi .first {
+		border-left-width: 1px;
+		-webkit-border-top-left-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		border-top-left-radius: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		border-bottom-left-radius: 5px
+	}
+	.ab-pagenavi .last {
+		-webkit-border-top-right-radius: 5px;
+		-moz-border-radius-topright: 5px;
+		border-top-right-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-radius-bottomright: 5px;
+		border-bottom-right-radius: 5px
+	}
+	.ab-box {
+		margin: 6px 16px 4px;
+		background: #fff;
+		_zoom: 1;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		float: left;
+	}
+	.ab-box .hd {
+		height: 50px;
+		border-bottom: 1px solid #e6e9ed
+	}
+	.ab-box .hd .title {
+		float: left;
+		margin: 0;
+		padding-left: 20px;
+		font: 400 18px/50px arial, "Hiragino Sans GB", "Microsoft YaHei", SimHei,
+			sans-serif;
+		color: #434a54
+	}
+	.ab-filter-list {
+		margin: 0;
+		padding: 0;
+		font-size: 12px;
+		line-height: 1.5
+	}
+	.ab-filter-list dt {
+		float: left;
+		clear: both;
+		width: 72px;
+		margin: 0 0 8px;
+		padding: 3px 5px 3px 0;
+		font-weight: 700;
+		text-align: right;
+		color: #434a54
+	}
+	.ab-filter-list dd {
+		float: left;
+		margin: 0;
+		*margin: 0 0 8px;
+		padding: 0;
+		width: 650px;
+	}
+	.ab-filter-list dd ul {
+		float: left;
+		margin: 0;
+		padding: 0;
+		list-style-type: none
+	}
+	.ab-filter-list dd li {
+		float: left;
+		_display: inline;
+		margin: 0 0 10px;
+		padding: 0 7px;
+		background: url(http://p.www.xiaomi.com/zt/2013/filter-seperator.png)
+			no-repeat 0 50%
+	}
+	.ab-filter-list dd li a {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		padding: 3px 10px;
+		color: #434a54
+	}
+	.ab-filter-list dd li a:hover {
+		color: #f84858
+	}
+	.ab-filter-list dd li.first {
+		background: none
+	}
+	.ab-filter-list dd li.first a {
+		padding: 3px 8px
+	}
+	.ab-filter-list dd li.current a {
+		padding: 3px 9px;
+		font-weight: 700;
+		color: #fff;
+		background: #aab2bd;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px
+	}
+	.ab-filter-list dd li.current a:hover {
+		text-decoration: none
+	}
+	.ab-filter-list dd li .icon-order-ascending,.ab-filter-list dd li .icon-order-descending
+		{
+		position: relative;
+		top: 1px;
+		width: 12px;
+		height: 12px;
+		margin-right: 2px;
+		*font-size: 0;
+		background-image:
+			url(http://p.www.xiaomi.com/zt/2013/icon-goods-list.png)
+	}
+	.ab-filter-list dd li .icon-order-ascending {
+		background-position: 0 0
+	}
+	.ab-filter-list dd li .icon-order-descending {
+		background-position: -12px 0
+	}
+	.ab-filter-list dd li.current .icon-order-ascending {
+		background-position: 0 -12px
+	}
+	.ab-filter-list dd li.current .icon-order-descending {
+		background-position: -12px -12px
+	}
+	.ab-filter-sub {
+		float: right;
+		font-size: 12px;
+		line-height: 24px;
+		_position: relative;
+		_top: 2px
+	}
+	.ab-filter-sub .icon-common {
+		position: relative;
+		top: 3px;
+		*top: 0;
+		margin-right: 2px
+	}
+}

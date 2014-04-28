@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+	<excludes>
+		<pattern>*.html</pattern>
+		<pattern>/ajax/*</pattern>
+		<pattern>/provider/provider_login.action*</pattern>
+		<pattern>/provider/provider_register.action*</pattern>
+	</excludes>
+	<decorator name="simpleHeaderTheme" page="simpleHeaderTheme.jsp">
+    	<pattern>/auth/*</pattern>
+    </decorator>
+    <decorator name="memberTheme" page="memberTheme.jsp">
+    	<pattern>/member/*</pattern>
+    </decorator>
+    <decorator name="estore" page="mainTheme.jsp">
+    	<pattern>/store/store.action</pattern>
+    </decorator>
+    <decorator name="backendTheme" page="backendTheme.jsp">
+    	<pattern>/provider/*</pattern>
+    	<pattern>/ereview/*</pattern>
+    	<pattern>/user/*</pattern>
+    	<pattern>/eorder/*</pattern>
+    </decorator>
+    <decorator name="adminTheme" page="adminTheme.jsp">
+    	<pattern>/admin/*</pattern>
+    </decorator>
+    
+    <decorator name="mainTheme" page="mainTheme.jsp">
+    	<pattern>/service/*</pattern>
+        <pattern>/*</pattern>
+    </decorator>
+</decorators>

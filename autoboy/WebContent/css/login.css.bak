@@ -1,0 +1,79 @@
+input{vertical-align: -2px;_vertical-align: 0px;}
+.G_nologin{width:960px;margin:0 auto;}
+.G_reg_header{padding:15px 0;}
+.reg_logo .logo{display:block;height:41px;overflow:hidden;width:102px;float:left;}
+.reg_logo .logo img{width:102;height:286px;background:url(http://static5.gewara.com/css/global/newLogos.png?v=0001) no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static5.gewara.com/css/global/newLogos.png?v=0001',sizingMethod='crop');border:none;}
+.G_reg_header h2{font:30px/50px "Î¢ÈíÑÅºÚ",Arial,Helvetica,'ËÎÌå';float:left;margin-left:25px;}
+.W_login_form .overTxtLabel{font-size:16px;}
+.G_nologin_main{width:920px;padding:20px;background:#fff;}
+.scroll_img{width:560px; height:420px;float:left;}
+.scroll_img #move_tag{width:560px; height:10px; text-align:center; line-height:10px; display: block;margin-top:10px;}
+.W_login_form .username, .W_login_form .password,.icon_th{background:url("http://static5.gewara.com/css/home/form_login.png") no-repeat 0 0;}
+.icon_th{padding-left:22px;background-position:-73px -494px;}
+.loginbox{width:340px;float:left;color:#999;padding-top:20px}
+.loginbox .W_login_form{padding-left:30px;}
+.W_login_form .info_list{margin:0 0 20px;position:relative;clear:both;}
+.W_login_form .info_list .notice{position:absolute;top:-21px;left:0;}
+.W_login_form .username, .W_login_form .password, .W_login_form .verify{border:1px solid #ccc; border-radius:2px;box-shadow:1px 1px 1px 0 #eaeaea inset;color:#ccc;height:30px;padding:9px 3px 3px 54px;display:block;}
+.W_login_form .focus_username{box-shadow:0 0 5px #ff9a66;border-color:#ff9a66;}
+.W_login_form .username input, .W_login_form .password input,.W_login_form .verify input{border:0 none;width:250px;height:24px;color:#808080;font:22px/24px verdana,lucida,arial,helvetica,"ËÎÌå",sans-serif;vertical-align: -3px;outline: none;background:#fff;}
+.W_login_form .focus_error{border-color:#dd4b39}
+.W_login_form .verify{padding:9px 5px 3px;float:left;}
+.W_login_form .verify input{width:155px;outline: none;}
+.W_login_form .username{background-position:3px -18px;}
+.W_login_form .password{background-position:3px -78px;}
+.W_login_form .lostPassword a,.no_reg_tip a{color:#333;}
+.W_login_form .no_reg{padding: 0;border-bottom:1px dashed #dddddd;height:61px;}
+.W_login_form .no_reg .W_btn_g{float:left;display:block;width:180px;height:60px;background-position:-1px -140px;font:30px/60px "Î¢ÈíÑÅºÚ",Arial,Helvetica,'ËÎÌå';color:#fff;text-align:center;border:0px;cursor: pointer;}
+.W_login_form .no_reg .W_btn_g:hover{background-position:-1px -220px;text-decoration:none;color:#fff;}
+.W_login_form .no_reg_tip{float:right;margin:32px 0 0;}
+
+.W_login_form .cooperation dt{font-size:20px;color:#333;}
+.W_login_form .cooperation dd a{
+	display: block;
+float: left;
+width: 150px;
+height: 48px;
+margin-right: 2px;
+text-indent: -9999px;
+overflow: hidden;}
+.W_login_form .cooperation dd .sina{background-position:0 -300px;}
+.W_login_form .cooperation dd .qq{background-position:-92px -300px;}
+.W_login_form .cooperation dd .zhifubao{background-position:-184px -300px;}
+.W_login_form .cooperation dd .yinlian{background-position:-276px -300px;}
+.W_login_form .cooperation dd .sina:hover{background-position:0 -401px;}
+.W_login_form .cooperation dd .qq:hover{background-position:-92px -401px;}
+.W_login_form .cooperation dd .zhifubao:hover{background-position:-184px -401px;}
+.W_login_form .cooperation dd .yinlian:hover{background-position:-276px -401px;}
+
+
+	
+.G_reg_bottom{width:100%;height:70px;line-height:70px;color:#333;background:#e4e4e4;text-align:left;}
+.G_reg_bottom p{width:1200px;margin:0 auto;}
+.G_reg_bottom p span{margin-right:15px;}
+.G_reg_bottom p span em{font-weight:bold;}
+.mr30{margin-right:30px!important;}
+.c_red{color:red;}
+.jointly img{margin-right:3px;}
+.jointly a{margin-right:10px;font-size:14px;color:#999}
+
+.mt10 a:hover.login_btn_qq {
+background-image: url(../image/icon_qq_hover.png);
+}
+
+.mt10 .login_btn_qq {
+float: left;
+height: 46px;
+width: 150px;
+background: url(../image/icon_qq.png) -6px 0 no-repeat;
+}
+.mt10 a:hover.login_btn_weib {
+background-image: url(../image/icon_btn_weib_hover.png);
+}
+
+.mt10 .login_btn_weib {
+float: right;
+height: 46px;
+width: 160px;
+background: url(../image/icon_btn_weib.png) -6px 0  no-repeat;
+}

@@ -1,0 +1,189 @@
+#my-container-wrap {
+//border: 1px solid #ccccc8;
+border-top: none;
+width: 990px;
+margin: 0 auto;
+padding: 0;
+}
+.my-navigator{
+	padding: 16px 0 10px 0;
+	height: 20px;
+}
+.my-navigator p{
+	float:left;
+}
+.my-container {
+	clear:both;
+	background-color:#fff;
+	border: 1px solid #ccccc8;
+	margin-bottom:30px;
+}
+.avatar img {
+	border-radius: 55px;
+	width: 70px;
+	height: 70px;
+	}
+.avatar {
+	margin: 10px auto 0;
+	padding: 4px;
+	margin: 6px 72px;
+	
+	}
+.my-menu{
+float: left;
+padding: 5px 10px 0 5px;
+min-height: 1px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+width: 260px;
+}
+.my-content{
+float: left;
+padding: 0 10px 0 15px;
+min-height: 1px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+width: 700px;
+}
+
+.menu_user{ width: 225px; background:#E4E4E4; float: left;font-family: "微软雅黑";min-height:660px;}
+.menu_title {
+	float: left;
+	width: 225px;
+	background-color: #fb8d3e;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight:bold;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	}
+.menu_user .head {
+	border-bottom: 2px solid #fb8d3e;
+}
+.menu_user .avatar_tit {
+	color: #5c5c5c;
+	margin: 2px 0 0;
+	text-align: center;
+	background-color: #f5f5f5;
+	height: 30px;
+	padding-top: 6px;
+	}
+.menu_item{ 
+	float: left;width: 218px;padding-left: 7px;background-color: #e4e4e4;color: #5c5c5c;font-size: 16px;height: 47px;line-height: 47px;
+	border-top: solid 1px #ededed;
+	border-bottom: solid 1px #d6d6d6;
+	cursor: pointer;
+}
+.menu_item .item_icon{ width: 22px;margin-left: 8px; margin-right: 9px;display: inline-block;float: left;height: 47px;}
+.menu_item .item_name{ display: inline-block;float: left;}
+.menu_item .item_more{ display: inline-block;float: right;height: 100%;}
+.menu_item .item_to_down{width: 17px;background: url(../image/member/icon_menu_todown.png) no-repeat 0 20px;margin-right: 20px;}
+.menu_item .item_to_right{width: 9px;background: url(../image/member/icon_menu_toright.png) no-repeat 0 15px;margin-right: 25px;}
+.menu_item_children{ 
+	border-top: solid 1px #ffffff;float: left;padding: 0 28px;background-color: #f5f5f5;width: 169px;}
+.menu_item_children .menu_item_child{
+	background: url(../image/member/icon_menu_dot.gif) no-repeat 2px 13px; border-top: solid 1px #ededed;float: left;display: block;padding-left: 18px;width: 150px;height: 28px;line-height: 28px;}
+.menu_item_children .menu_item_child a{ color: #6f6f6f;text-decoration: none;font-size: 14px;float: left;width: 100%;}
+.menu_item_children .selected a{color:#F18D01 !important; }
+.menu_item_children .menu_item_child a:hover{ color:#F18D01;}
+.menu_item .icon_msg{ background: url(../image/member/icon_msg.png) no-repeat 0 15px;}
+.menu_item .icon_order{ background: url(../image/member/icon_order.png) no-repeat 0 15px;}
+.menu_item .icon_blance{ background: url(../image/member/icon_blance.png) no-repeat 0 15px;}
+.menu_item .icon_car{ background: url(../image/member/icon_car.png) no-repeat 0 15px;width: 30px;margin-left: 0;}
+.menu_item .icon_account{ background: url(../image/member/icon_account.png) no-repeat 0 17px;}
+
+.pwd-form fieldset.item {
+border: 0;
+padding: 15px 0 0;
+}
+.pwd-form .item label {
+display: block;
+margin-bottom: 5px;
+}
+
+.pwd-form .input, .pwd-form .input-area {
+background: #fff;
+border: 1px solid #CCCDCE;
+color: #434a54;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.pwd-form .input {
+width: 210px;
+height: 35px;
+line-height: 25px;
+padding: 0 10px;
+}
+.pwd-form  .item label span {
+color: #f84858;
+}
+.pwd-form .input:focus,.pwd-form  .input-area:focus {
+    border-color: #f84858;
+    outline: none
+}
+.mess td {
+height: auto;
+width: 260px;
+padding-bottom: 22px;
+font-size: 14px;
+font-weight: bold;
+}
+.mess td a {
+font-size: 12px;
+font-weight: normal;
+margin-left: 10px;
+}
+.user_info {
+margin: 40px;
+}
+.user_info .photo {
+width: 120px;
+float: left;
+text-align:center;
+
+}
+.user_info .photo img {
+	margin-bottom:6px;
+}
+.mess td {
+height: auto;
+width: 260px;
+padding-bottom: 22px;
+font-size: 14px;
+font-weight: bold;
+}
+.mess td.td_l {
+vertical-align: top;
+text-align: right;
+width: 80px;
+color: #999;
+font-size: 14px;
+font-weight: normal;
+}
+
+ 
+#uc-avatar {
+	float: left;
+	position: relative;
+	width: 120px;
+	height: 148px;
+	border: 1px solid #eee;
+	background-position: 1px 1px;
+	background-repeat: no-repeat;
+	padding:3px;
+}
+ 
+#uc-avatar a {
+	position: absolute;
+	left: 1px;
+	right: 1px;
+	bottom: 1px;
+	padding: 0;
+	line-height: 22px;
+	display: block;
+	text-align: center;
+}

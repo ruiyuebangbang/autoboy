@@ -1,0 +1,181 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	
+	<include file="struts-backend.xml"></include>
+	<include file="struts-admin.xml"></include>
+	<package name="captcha" extends="struts-default" namespace="/ajax">
+		<action name="captcha" method="captcha" class="com.autoboys.action.CaptchaAction">
+			<result name="success">/ajax/captcha.jsp</result>
+		</action>
+		<action name="getCaptcha" method="getCaptcha" class="com.autoboys.action.CaptchaAction">
+			<result name="success">/ajax/captcha.jsp</result>
+		</action>
+		
+	</package>
+	<package name="member" extends="hibernate-default" namespace="/member">
+		<action name="member" class="com.autoboys.action.MemberAction">
+			<result name="success">member.jsp</result>
+		</action>
+		<action name="changePassword" method="changePassword" class="com.autoboys.action.MemberAction">
+			<result name="input">changepwd.jsp</result>
+			<result name="success">member.jsp</result>
+		</action>
+		<action name="edit" method="edit" class="com.autoboys.action.MemberAction">
+			<result name="input">memberInfo.jsp</result>
+			<result name="success">member.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="Vehicle" extends="struts-default" namespace="/vehicle">
+		<action name="chooseVehicle" method="chooseVehicle" class="com.autoboys.action.VehicleAction">
+			<result name="success">/vehicle/chooseVehicle.jsp</result>
+		</action>
+		
+	</package>
+	<package name="ajax" extends="hibernate-default" namespace="/ajax/common">
+		<action name="loadHeader" method="loadHeader" class="com.autoboys.action.AjaxAction">
+			<result name="success">/ajax/common/loadHeader.jsp</result>
+		</action>
+		<action name="getBrands" method="getBrands" class="com.autoboys.action.AjaxAction">
+			<result name="success">/ajax/common/getBrands.jsp</result>
+		</action>
+		<action name="getVehicleSeries" method="getVehicleSeries" class="com.autoboys.action.AjaxAction">
+			<result name="success">/ajax/common/getSeries.jsp</result>
+		</action>
+		<action name="getVehicleEmission" method="getVehicleEmission" class="com.autoboys.action.AjaxAction">
+			<result name="success">/ajax/common/getEmission.jsp</result>
+		</action>
+		<action name="getVehicleYear" method="getVehicleYear" class="com.autoboys.action.AjaxAction">
+			<result name="success">/ajax/common/getYear.jsp</result>
+		</action>
+		<action name="getVehicleModel" method="getVehicleModel" class="com.autoboys.action.AjaxAction">
+			<result name="success">/ajax/common/getVehicleModel.jsp</result>
+		</action>
+		<action name="confirmVechicle" method="confirmVechicle" class="com.autoboys.action.AjaxAction">
+			<result name="success">/ajax/common/getYear.jsp</result>
+		</action>
+		<action name="updateEmission" method="updateEmission" class="com.autoboys.action.AjaxAction">
+			<result name="success">/ajax/common/getEmission.jsp</result>
+		</action>
+		<action name="getRegionsByReg1" method="getRegionsByReg1" class="com.autoboys.action.AjaxAction">
+			<result name="success">/null.jsp</result>
+		</action>
+		<action name="updateProductPrice" method="updatePrice" class="com.autoboys.action.AjaxAction">
+			<result name="success">/null.jsp</result>
+		</action>
+		<action name="upload" class="com.autoboys.action.UploadAction">
+			<result name="success">upload.jsp</result>
+		</action>
+		<action name="uploadDZ" method="uploadDZ" class="com.autoboys.action.UploadAction">
+			<result name="success">upload.jsp</result>
+		</action>
+		<action name="uploadProviderImgs" method="uploadProviderImgs" class="com.autoboys.action.UploadAction">
+			<result name="success">upload.jsp</result>
+		</action>
+		<action name="getService" method="getServiceByCat" class="com.autoboys.action.AjaxAction">
+			<result name="success">/null.jsp</result>
+		</action>
+		<action name="getVehicleSeries1" method="getVehicleSeries1" class="com.autoboys.action.AjaxAction">
+			<result name="success">/null.jsp</result>
+		</action>
+	</package>
+	<package name="store" extends="struts-default" namespace="/store">
+		<action name="store" class="com.autoboys.action.StoreAction">
+			<result name="success">store.jsp</result>
+		</action>
+		<action name="main" method="queryProvider" class="com.autoboys.action.StoreAction">
+			<result name="success">index.jsp</result>
+		</action>
+	</package>
+	<package name="checkMember" extends="struts-default">
+		<action name="checkNickName" class="com.autoboys.action.MemberAction" method="checkNickName">
+			<result name="success">checkMember.jsp</result>
+		</action>
+	</package>
+	<package name="shouye" extends="struts-default">
+		<action name="main" class="com.autoboys.action.IndexAction">
+			<result name="success">index.jsp</result>
+		</action>
+	</package>
+	<package name="auth" extends="hibernate-default" namespace="/auth">
+		<action name="register" class="com.autoboys.action.RegisterAction">
+			<result name="success">register.jsp</result>
+			<result name="create" >/service/service.action</result>
+		</action>
+		<action name="logout" class="com.autoboys.action.LogoutAction">
+			<result name="success">register.jsp</result>
+		</action>
+		<action name="login" class="com.autoboys.action.LoginAction">
+			<result name="login">login.jsp</result>
+			<result name="home" type="redirectAction">
+				<param name="actionName">member</param>     
+            	<param name="namespace">/member</param>  
+			</result>
+		</action>
+		<action name="validateNickName" class="com.autoboys.action.MemberAction" method="validateNickName">
+			<result name="success">checkMember.jsp</result>
+		</action>
+		<action name="doRegister" method="doRegister" class="com.autoboys.action.MemberAction">
+			<result name="success"></result>
+		</action>
+
+	</package>
+	
+	<package name="service" extends="struts-default" namespace="/service">
+		<action name="service" class="com.autoboys.action.ServiceAction">
+			<result name="success">servicelist.jsp</result>
+		</action>
+		<action name="proposal" method="postRequirement" class="com.autoboys.action.ServiceAction">
+			<result name="success">serviceProposal.jsp</result>
+		</action>
+		<action name="carinfo" class="com.autoboys.action.ServiceCarInfoAction">
+			<result name="success">carInfo.jsp</result>
+		</action>
+		<action name="plan" class="com.autoboys.action.ServicePlanAction">
+			<result name="success">servicePlan.jsp</result>
+		</action>
+		<action name="choose" method="chooseService" class="com.autoboys.action.ServiceAction">
+			<result name="success">chooseService.jsp</result>
+		</action>
+	</package>
+	<!-- 此package下的action为网站前台使用，应用mainTheme模板 -->
+	<package name="review" extends="struts-default" namespace="/review">
+		<action name="review" class="com.autoboys.action.ReviewAction">
+			<result name="success">reviewIndex.jsp</result>
+		</action>
+	</package>
+	
+		
+	<package name="chewen" extends="struts-default" namespace="/chewen">
+		<action name="chewen" class="com.autoboys.action.CheWenAction">
+			<result name="success">index.jsp</result>
+		</action>
+		<action name="detail" method="detail" class="com.autoboys.action.CheWenAction">
+			<result name="success">detail.jsp</result>
+		</action>
+		<action name="ask" method="ask" class="com.autoboys.action.CheWenAction">
+			<result name="success">question.jsp</result>
+		</action>
+	</package>
+	<package name="user" extends="hibernate-default" namespace="/user">
+		<action name="saveOrUpdateUser" method="saveOrUpdate" class="com.autoboys.action.UserAction">
+			<result name="success" type="redirect">userList.action</result>
+			<result name="input">userList.jsp</result>
+		</action>
+		<action name="userList" method="list" class="com.autoboys.action.UserAction">
+			<result name="success">/user/userList.jsp</result>
+		</action>
+		<action name="editUser" method="edit" class="com.autoboys.action.UserAction">
+			<result name="success">/user/userList.jsp</result>
+		</action>
+		<action name="deleteUser" method="delete" class="com.autoboys.action.UserAction">
+			<result name="success" type="redirect">userList.action</result>
+		</action>
+	</package>
+</struts>
+

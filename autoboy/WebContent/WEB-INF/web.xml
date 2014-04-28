@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Auto boys</display-name>
+  <!--中文乱码处理过滤 -->
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.autoboys.util.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>ignore</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- 登陆及权限检  -->
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.autoboys.util.AuthFilter</filter-class>
+    <init-param>
+      <param-name>loginUrl</param-name>
+      <param-value>/provider/provider_login.action</param-value>
+    </init-param>
+    <init-param>
+      <param-name>userLoginUrl</param-name>
+      <param-value>/auth/login.action</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/provider/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/member/*</url-pattern>
+  </filter-mapping>
+
+  <!-- sitemesh配置 --> 
+  <filter> 
+    <filter-name>sitemesh</filter-name>
+    <filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>sitemesh</filter-name>
+    <url-pattern>*.action</url-pattern>
+  </filter-mapping>
+  <!-- struts2 filter -->
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>
+			org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>*.action</url-pattern>
+  </filter-mapping>
+
+  <welcome-file-list>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- 配置proxool连接-->
+  <servlet>
+    <servlet-name>ServletConfigurator</servlet-name>
+    <servlet-class>  
+   org.logicalcobwebs.proxool.configuration.ServletConfigurator   
+  </servlet-class>
+    <init-param>
+      <param-name>xmlFile</param-name>
+      <param-value>WEB-INF/proxool.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>Admin</servlet-name>
+    <servlet-class>  
+    org.logicalcobwebs.proxool.admin.servlet.AdminServlet   
+  </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Admin</servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+
+ <!--临时使用 -->
+  <context-param>
+    <param-name>imagepath</param-name>
+    <param-value>e:/image/</param-value>
+  </context-param>
+</web-app>
