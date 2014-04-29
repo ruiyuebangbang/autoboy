@@ -13,7 +13,7 @@
 			<h1>服务项目设置</h1>
 		</div>
 	<div class="pproject">
-		
+		<s:form id="serviceForm" method="post" theme="simple">
 		<s:iterator value="serviceCats" status="rows">
 		<dl class="clearfix">
 			<dt>
@@ -21,7 +21,7 @@
 				<label for="<s:property value="code" />" class="checkboxLabel"><s:property value="name" /></label>
 			</dt>
 			<dd id='service-<s:property value="code" />'>
-				<ol>
+				<!-- ul>
 					<s:iterator value="services" id="inner"> 
 					<li>
 						<input type="checkbox" name="service" value="<s:property value="#inner.CODE" />" id="<s:property value="#inner.CODE" />">
@@ -29,13 +29,16 @@
 					</li>
 					</s:iterator>
 					
-				</ol>
+				</ul -->
+				<s:checkboxlist list="services" listKey="CODE" listValue="NAME" value="providerServices" name="providerServices" />
 			</dd>
 		</dl>
 		</s:iterator>
+		<div style="text-align:center;"><input type="submit" class="btn btn-small btn-primary" value="选好了，提交"></div>
+		</s:form>
 		
 	</div>
-	<div style="text-align:center;"><a class="btn btn-small btn-primary"  href="">选好了，提交</a></div>
+	
 <script type="text/javascript">
 window.addEvent('domready', function() {
 	$$('.cat').each(function(even){

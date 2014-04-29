@@ -23,7 +23,8 @@
 	</package>
 	<package name="provider/service" extends="hibernate-default" namespace="/provider/service">
 		<action name="serviceConfig" method="serviceConfig" class="com.autoboys.action.provider.ServiceAction">
-            <result name="success">/provider/serviceConfig.jsp</result>
+            <result name="success">/provider/success.jsp</result>
+            <result name="init">/provider/serviceConfig.jsp</result>
 		</action>
 	</package>
 	<package name="provider" extends="hibernate-default" namespace="/provider">

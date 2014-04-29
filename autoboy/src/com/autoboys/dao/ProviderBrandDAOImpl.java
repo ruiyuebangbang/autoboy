@@ -79,9 +79,12 @@ public class ProviderBrandDAOImpl implements ProviderBrandDAO {
 			String sql = "insert into provider_brand (id, provider_id, brand_code) values (s_provider_brand.NextVal, ?, ?)";
 			//创建SQL执行工具   
 			conn = ProxoolConnection.getConnection();
+			
+			//删除以前设置的汽车品牌
 			psdel = conn.prepareStatement(sqldel);
 			psdel.setLong(1, providerId);
 			psdel.executeUpdate();
+			//批量新增汽车品牌			
 			ps = conn.prepareStatement(sql);
 			for (String brandCode: list) {
 				ps.setLong(1, providerId);

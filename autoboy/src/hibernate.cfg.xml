@@ -30,6 +30,7 @@
 		<mapping class="com.autoboys.domain.Service" />
 		<mapping class="com.autoboys.domain.ProductBrand" />
 		<mapping class="com.autoboys.domain.ProviderProduct" />
+		<mapping class="com.autoboys.domain.ProviderService" />
 		<mapping class="com.autoboys.domain.Product" />
 
 	</session-factory>
