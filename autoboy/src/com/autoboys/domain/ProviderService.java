@@ -7,13 +7,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USER")
+@Table(name="provider_service")
 public class ProviderService {
 
 	private Long id;
-	private String name;
-	private String password;
-	private String status;
+	private String serviceCode;
+	private String labourPrice;
+	private String providerId;
 	
 	
 	@Id
@@ -26,28 +26,28 @@ public class ProviderService {
 		this.id = id;
 	}
 	
-	@Column(name="USER_NAME")
-	public String getName() {
-		return name;
+	@Column(name="service_code")
+	public String getServiceCode() {
+		return serviceCode;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	@Column(name="password")
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setServiceCode(String serviceCode) {
+		this.serviceCode = serviceCode;
 	}
 	
-	@Column(name="status")
-	public String getStatus() {
-		return status;
+	@Column(name="labour_price")
+	public String getLabourPrice() {
+		return labourPrice;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setLabourPrice(String labourPrice) {
+		this.labourPrice = labourPrice;
+	}
+	
+	@Column(name="provider_id")
+	public String getProviderId() {
+		return providerId;
+	}
+	public void setProviderId(String providerId) {
+		this.providerId = providerId;
 	}
 	
 	

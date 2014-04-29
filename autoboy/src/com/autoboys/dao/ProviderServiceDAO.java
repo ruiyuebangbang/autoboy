@@ -11,4 +11,5 @@ public interface ProviderServiceDAO {
 	public List<ProviderService> listProviderService(long providerId);
 	public ProviderService listProviderServiceById(Long providerServiceId);
 	public void deleteProviderService(Long providerServiceId);
+	public int update(Long providerId,List<String> list);
 }

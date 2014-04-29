@@ -161,9 +161,9 @@ color:#fff;
 				</div>
 			</div>
 
-			<script type="text/javascript" src="/auto/scripts/mootools.js"></script>
+			<script type="text/javascript" src="<%=request.getContextPath() %>/scripts/mootools.js"></script>
 			<script type="text/javascript"
-				src="/auto/scripts/silunzi.js?n=silunzi-util&v=2014022209"></script>
+				src="<%=request.getContextPath() %>/scripts/silunzi.js?n=silunzi-util&v=2014022209"></script>
 			<script type="text/javascript">
 				window.addEvent('domready', function() {
 					lunziUtil.textOver('.G_input');

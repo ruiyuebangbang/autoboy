@@ -1,5 +1,7 @@
 package com.autoboys.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
 import org.hibernate.SQLQuery;
@@ -9,6 +11,7 @@ import org.hibernate.Transaction;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.SessionTarget;
 import com.googlecode.s2hibernate.struts2.plugin.annotations.TransactionTarget;
 import com.autoboys.domain.*;
+import com.autoboys.util.ProxoolConnection;
 
 public class ProviderServiceDAOImpl implements ProviderServiceDAO {
 	
@@ -42,6 +45,46 @@ public class ProviderServiceDAOImpl implements ProviderServiceDAO {
 			transaction.rollback();
 			e.printStackTrace();
 		} 
+	}
+	
+	/**
+	 * 批量更新服务商服务项目
+	 */
+	@Override
+	public int update(Long providerId,List<String> list) {
+		
+		Connection conn = null;
+		PreparedStatement psdel = null;
+		PreparedStatement ps = null;
+		try {
+			String sqldel = "delete from provider_service where provider_id =? ";
+			String sql = "insert into provider_service (id, provider_id, service_code) values (s_provider_service.NextVal, ?, ?)";
+			//创建SQL执行工具   
+			conn = ProxoolConnection.getConnection();
+			
+			//删除以前设置的汽车品牌
+			psdel = conn.prepareStatement(sqldel);
+			psdel.setLong(1, providerId);
+			psdel.executeUpdate();
+			//批量新增汽车品牌			
+			ps = conn.prepareStatement(sql);
+			for (String brandCode: list) {
+				ps.setLong(1, providerId);
+				ps.setString(2, brandCode);
+				ps.addBatch();
+			}
+			ps.executeBatch();
+			conn.commit();
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				ps.close();
+				psdel.close();
+				conn.close();
+			}catch(Exception e) {}
+		}
+		return 0;
 	}
 	
 	/**

@@ -15,9 +15,9 @@ silunzi.util.onReturn = function(a, b) {
 silunzi.util.rtime = function() {
     return new Date().getTime()
 };
-silunzi.util.basePath = "/auto/";
-silunzi.util.imgPath = "http://localhost:8080/auto/";
-silunzi.util.cdnPath = "http://localhost:8080/auto/";
+silunzi.util.basePath = "/autoboy/";
+silunzi.util.imgPath = "http://localhost:8080/autoboy/";
+silunzi.util.cdnPath = "http://localhost:8080/autoboy/";
 silunzi.util.icon = silunzi.util.cdnPath + "image/pub_icon.png";
 silunzi.util.retdata = {};
 silunzi.util.retdata.success = true;

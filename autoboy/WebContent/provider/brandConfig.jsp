@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="pcontent-title"><h1>维修品牌设置</h1></div>
-<s:form id="brandForm" method="post" action="edit" theme="simple">
+<s:form id="brandForm" method="post" theme="simple">
 <div class="b-shortcut" style="width: 20px; float: left; margin-left: 20px;">
 <span style="margin-top:2px;">A</span>
 <span style="margin-top:4px;">B</span>
@@ -46,14 +46,12 @@
 <span style="margin-top:4px;">Y</span>
 <span style="margin-top:4px;">Z</span>
 </div>
-<s:checkboxlist list="vehicleCategories" listKey="code" listValue="cname" value="" name="codes" />
+<s:checkboxlist list="brandList" listKey="code" listValue="cname" value="pbCodeList" name="pbCodeList" />
 <div style="clear:both;"></div>
-</s:form>
-<div style="clear: both;padding-top: 20px;padding-left: 20px;">
-<span>选择服务的汽车品牌,车主可以通过这些信息快速找到咱公司；同时，这些信息也会出现在咱公司店铺首页</span>
-</div>
+
 <div style="clear:both;width:100%;text-align:center; padding:20px 0;">
-<a class="btn btn-small btn-primary" href="#">选好了，提交</a>
+<input type="submit" class="btn btn-small btn-primary" value="选好了，提交">
 </div>
+</s:form>
 </body>
 </html>
